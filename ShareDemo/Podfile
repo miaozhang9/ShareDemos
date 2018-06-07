@@ -1,0 +1,12 @@
+
+workspace ‘ShareDemo.xcworkspace'
+platform :ios, ’9.0’
+inhibit_all_warnings!
+use_frameworks!
+
+target "ShareDemo" do
+#   pod 'UMCCommon'
+#   pod 'UMCShare/Social/ReducedWeChat'
+#   pod 'UMCShare/UI'
+
+end
