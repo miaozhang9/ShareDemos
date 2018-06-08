@@ -44,7 +44,11 @@
    
     //    @"https://test-p2pp-loan-stg.pingan.com.cn/loan/page/ajd/index.html?t=list"
     NSString *str = @"www/index.html";
-    //      str = @"http://p2pp-loan-stg2.pingan.com.cn:12080/loan/page/ajd/index.html?t=sdk";
+    if (self.textField.text != nil && self.textField.text.length > 0) {
+        str = self.textField.text;
+    }
+    //    str = @"https://test-p2pp-loan-stg.pingan.com.cn/loan/page/demo/index.html";"
+    //    str = @"http://p2pp-loan-stg2.pingan.com.cn:12080/loan/page/ajd/index.html?t=sdk";
     //    str = @"http://yujiangshui.github.io/test-webview/";
     //    str = @"https://test-p2pp-loan-stg.pingan.com.cn/loan/page/ajd/index.html?t=list";
     //    str = @"https://test-p2pp-loan-stg.pingan.com.cn/loan/page/demo/index.html?t=test";
@@ -76,7 +80,7 @@
         _textField.borderStyle = UITextBorderStyleRoundedRect;
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.placeholder = @"请输入网址";
-        _textField.text = @"https://test-p2pp-loan-stg.pingan.com.cn/loan/page/demo/index.html";
+        _textField.text = @"www/index.html";
     }
     return _textField;
 }
