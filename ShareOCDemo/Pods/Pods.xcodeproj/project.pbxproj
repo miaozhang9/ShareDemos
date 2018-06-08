@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4457F2717039A9532749ED7D2302C7F3 /* Pods-ShareOCDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F641FD3E591C0DAD3AD07862217B91A6 /* Pods-ShareOCDemo-dummy.m */; };
+		88FB447089021973B483125233EC0183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A97C79821AA6803238265F363567D93A /* Pods-ShareOCDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D38E8703991FB27562F5BD9E01243E0 /* Pods-ShareOCDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0671404DCD99E54B13B00C4648EC1682 /* libSocialWeChat.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialWeChat.a; path = UMShare/SocialLibraries/WeChat/libSocialWeChat.a; sourceTree = "<group>"; };
+		2016667BB4BBB50EF240DDAFB473CE29 /* Pods-ShareOCDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShareOCDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		44DD82E757C239432B3B6CBA3FBF7695 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UShareUI.framework; path = UMShare/UMSocialUI/UShareUI.framework; sourceTree = "<group>"; };
+		609AE72726AE087CB70E0707D7EA49CA /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKResources.bundle; path = UMShare/UMSocialUI/UMSocialSDKResources.bundle; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		78827D2EFB8C0D4826F0C28EA6DC5D7B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D38E8703991FB27562F5BD9E01243E0 /* Pods-ShareOCDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShareOCDemo-umbrella.h"; sourceTree = "<group>"; };
+		82B5DF8CE3F74720F9C21D63E085BBFA /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialWechatHandler.h; path = UMShare/SocialLibraries/WeChat/UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		8495B0CDABD66D6C446EDEEC70624C4F /* Pods-ShareOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShareOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8801F0ABE8B98C2D8B71DD6C276A7B01 /* Pods_ShareOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ShareOCDemo.framework; path = "Pods-ShareOCDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB6B116052676EC0AB5FBDD593C7544F /* Pods-ShareOCDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShareOCDemo-resources.sh"; sourceTree = "<group>"; };
+		C9EC6CC88BF4575CDF9BAA5E6549A33D /* Pods-ShareOCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShareOCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CCB0886A600A0278360D02E76203CAE0 /* UMShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMShare.framework; path = UMShare/UMShare.framework; sourceTree = "<group>"; };
+		EB9548BAD3BD2B478FD91193582F33CF /* Pods-ShareOCDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ShareOCDemo.modulemap"; sourceTree = "<group>"; };
+		EF01A1C4B21C5C72AE7D22AC15EEB22C /* Pods-ShareOCDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShareOCDemo-frameworks.sh"; sourceTree = "<group>"; };
+		F1A6B520BBDD10971DEDF338A5411C73 /* Pods-ShareOCDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShareOCDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F37386D650FA0456D5ADD7589E56C188 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
+		F641FD3E591C0DAD3AD07862217B91A6 /* Pods-ShareOCDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShareOCDemo-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D2921E1F7AA4D2D2D9F5C2E5AC14B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FB447089021973B483125233EC0183 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12631748182DC4B9BE9F4FEECFA1D6B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				609AE72726AE087CB70E0707D7EA49CA /* UMSocialSDKResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2E0715D6B095D322AE986A3DF1896C00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F37386D650FA0456D5ADD7589E56C188 /* UMCommon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		307E703F53742F81D565A3A0536586CE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				32B77DD6621AAA31B867F53F5F026902 /* Frameworks */,
+				12631748182DC4B9BE9F4FEECFA1D6B6 /* Resources */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		32B77DD6621AAA31B867F53F5F026902 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44DD82E757C239432B3B6CBA3FBF7695 /* UShareUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		574555B86E0927ACF8CB122C44835100 /* UMCCommon */ = {
+			isa = PBXGroup;
+			children = (
+				2E0715D6B095D322AE986A3DF1896C00 /* Frameworks */,
+			);
+			name = UMCCommon;
+			path = UMCCommon;
+			sourceTree = "<group>";
+		};
+		600D25786C40EAA3CB71369B21C7A27A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B4920463F5EB5F4D917A77C06666519B /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		6B8C904AD6EE9D87B61A70F4132534E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8801F0ABE8B98C2D8B71DD6C276A7B01 /* Pods_ShareOCDemo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		766CFCC7420A21F2097EED1F6CFA8295 /* UMCShare */ = {
+			isa = PBXGroup;
+			children = (
+				600D25786C40EAA3CB71369B21C7A27A /* Core */,
+				7FCD0B285C076F10A581BBCA3CC704AA /* Social */,
+				307E703F53742F81D565A3A0536586CE /* UI */,
+			);
+			name = UMCShare;
+			path = UMCShare;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				81634A0E43D73F670D001B539BB0F5CE /* Pods */,
+				6B8C904AD6EE9D87B61A70F4132534E6 /* Products */,
+				B07259183749CE56037F643678045C37 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7FCD0B285C076F10A581BBCA3CC704AA /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				E1D2A81F666E0469BBC6FCA26AE898BE /* ReducedWeChat */,
+			);
+			name = Social;
+			sourceTree = "<group>";
+		};
+		81634A0E43D73F670D001B539BB0F5CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				574555B86E0927ACF8CB122C44835100 /* UMCCommon */,
+				766CFCC7420A21F2097EED1F6CFA8295 /* UMCShare */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		830DF893F2D4EDA51DAD3C0A91EEE911 /* Pods-ShareOCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				78827D2EFB8C0D4826F0C28EA6DC5D7B /* Info.plist */,
+				EB9548BAD3BD2B478FD91193582F33CF /* Pods-ShareOCDemo.modulemap */,
+				F1A6B520BBDD10971DEDF338A5411C73 /* Pods-ShareOCDemo-acknowledgements.markdown */,
+				2016667BB4BBB50EF240DDAFB473CE29 /* Pods-ShareOCDemo-acknowledgements.plist */,
+				F641FD3E591C0DAD3AD07862217B91A6 /* Pods-ShareOCDemo-dummy.m */,
+				EF01A1C4B21C5C72AE7D22AC15EEB22C /* Pods-ShareOCDemo-frameworks.sh */,
+				BB6B116052676EC0AB5FBDD593C7544F /* Pods-ShareOCDemo-resources.sh */,
+				7D38E8703991FB27562F5BD9E01243E0 /* Pods-ShareOCDemo-umbrella.h */,
+				8495B0CDABD66D6C446EDEEC70624C4F /* Pods-ShareOCDemo.debug.xcconfig */,
+				C9EC6CC88BF4575CDF9BAA5E6549A33D /* Pods-ShareOCDemo.release.xcconfig */,
+			);
+			name = "Pods-ShareOCDemo";
+			path = "Target Support Files/Pods-ShareOCDemo";
+			sourceTree = "<group>";
+		};
+		B07259183749CE56037F643678045C37 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				830DF893F2D4EDA51DAD3C0A91EEE911 /* Pods-ShareOCDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B4920463F5EB5F4D917A77C06666519B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCB0886A600A0278360D02E76203CAE0 /* UMShare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B869ECD137DFD1097B21B544C6554DA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0671404DCD99E54B13B00C4648EC1682 /* libSocialWeChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E1D2A81F666E0469BBC6FCA26AE898BE /* ReducedWeChat */ = {
+			isa = PBXGroup;
+			children = (
+				82B5DF8CE3F74720F9C21D63E085BBFA /* UMSocialWechatHandler.h */,
+				B869ECD137DFD1097B21B544C6554DA9 /* Frameworks */,
+			);
+			name = ReducedWeChat;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4C2FD11C43D08134C70A2AEC09D2E651 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A97C79821AA6803238265F363567D93A /* Pods-ShareOCDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C52EED2E15B68248AC295BE92551FE3F /* Pods-ShareOCDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C07EACEC5293112F4416AFA71C31BD6 /* Build configuration list for PBXNativeTarget "Pods-ShareOCDemo" */;
+			buildPhases = (
+				A5055F839B605B020C48EDFA897D45C6 /* Sources */,
+				9D2921E1F7AA4D2D2D9F5C2E5AC14B92 /* Frameworks */,
+				4C2FD11C43D08134C70A2AEC09D2E651 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ShareOCDemo";
+			productName = "Pods-ShareOCDemo";
+			productReference = 8801F0ABE8B98C2D8B71DD6C276A7B01 /* Pods_ShareOCDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6B8C904AD6EE9D87B61A70F4132534E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C52EED2E15B68248AC295BE92551FE3F /* Pods-ShareOCDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5055F839B605B020C48EDFA897D45C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4457F2717039A9532749ED7D2302C7F3 /* Pods-ShareOCDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ED85E8B226310C7E5CDEE4F678CA5B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8495B0CDABD66D6C446EDEEC70624C4F /* Pods-ShareOCDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ShareOCDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShareOCDemo/Pods-ShareOCDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		FE90B02C9978ADA8F5C6C3A0E7405484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9EC6CC88BF4575CDF9BAA5E6549A33D /* Pods-ShareOCDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ShareOCDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShareOCDemo/Pods-ShareOCDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C07EACEC5293112F4416AFA71C31BD6 /* Build configuration list for PBXNativeTarget "Pods-ShareOCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED85E8B226310C7E5CDEE4F678CA5B20 /* Debug */,
+				FE90B02C9978ADA8F5C6C3A0E7405484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199D972A13F2B4C56847F7A89CCA83BC /* Debug */,
+				FDB2FC4A1E5891381CD9D922145497F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
