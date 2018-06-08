@@ -13,7 +13,7 @@
 #import <UShareUI/UShareUI.h>
 
 
-@interface ViewController ()<UITextViewDelegate,UMSocialShareMenuViewDelegate>
+@interface ViewController ()<UITextFieldDelegate,UMSocialShareMenuViewDelegate>
 
 @property (nonatomic, strong) UITextField *textField;
 
@@ -81,10 +81,14 @@
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.placeholder = @"请输入网址";
         _textField.text = @"www/index.html";
+        _textField.delegate = self;
     }
     return _textField;
 }
 
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    [self.view endEditing:YES]; //实现该方法是需要注意view需要是继承UIControl而来的
+//}
 #pragma mark -QHBasicProtocol
 //得到用户账户信息
 -(NSDictionary *)getAgentUserInfo {
