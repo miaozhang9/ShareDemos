@@ -32,7 +32,7 @@
     btn.layer.borderColor = [UIColor blueColor].CGColor;
     btn.layer.borderWidth = 1.0;
     btn.frame = CGRectMake(0, 0, 300, 50);
-    btn.center = CGPointMake(self.view.center.x, self.view.center.y - 190);
+    btn.center = CGPointMake(self.view.center.x, self.view.center.y - 130);
     [btn setTitle:@"启动贷款SDK(local)" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(launch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
@@ -76,11 +76,11 @@
 - (UITextField *)textField{
     if (!_textField) {
         _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 300, 50)];
-        _textField.center = CGPointMake(self.view.center.x, self.view.center.y -260);
+        _textField.center = CGPointMake(self.view.center.x, self.view.center.y -200);
         _textField.borderStyle = UITextBorderStyleRoundedRect;
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.placeholder = @"请输入网址";
-        _textField.text = @"www/index.html";
+        _textField.text = @"https://loanapp-stg.pingan.com.cn/app/website/ylbsat/index.html#/sharePage?mediaSource=ylb";//@"www/index.html";
         _textField.delegate = self;
     }
     return _textField;
@@ -196,15 +196,14 @@
     webpageObject.title = paramData[@"shareTitle"];
     webpageObject.descr = paramData[@"shareContent"];
     webpageObject.thumbImage = paramData[@"shareImageUrl"];//@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528437962549&di=6dc8710b0e286c919e4b611c3ca40cb3&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F016b815809fab8a84a0d304f7e1fde.png";//
-    webpageObject.webpageUrl =  paramData[@"shareActionUrl"];//@"https://loanapp-stg.pingan.com.cn/app/website/ylbsat/index.html#/activityPage?mediaSource=ylb&refereePhone=18321509093";//
+    webpageObject.webpageUrl =  paramData[@"shareActionUrl"];//@"https://loanapp-stg.pingan.com.cn/app/website/ylbsat/index.html#/sharePage?mediaSource=ylb";//
     UMSocialMessageObject *messageObject = [[UMSocialMessageObject alloc] init];
     messageObject.shareObject = webpageObject;
     
     [[UMSocialManager defaultManager] shareToPlatform:type messageObject:messageObject currentViewController:self completion:^(id result, NSError *error) {
         //do anything
     }];
-   
-   ;
+
   
 }
      
