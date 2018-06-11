@@ -195,8 +195,9 @@
     NSDictionary *paramData = shareInfo[@"paramData"];
     webpageObject.title = paramData[@"shareTitle"];
     webpageObject.descr = paramData[@"shareContent"];
-    webpageObject.thumbImage = paramData[@"shareImageUrl"];//@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528437962549&di=6dc8710b0e286c919e4b611c3ca40cb3&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F016b815809fab8a84a0d304f7e1fde.png";//
-    webpageObject.webpageUrl =  paramData[@"shareActionUrl"];//@"https://loanapp-stg.pingan.com.cn/app/website/ylbsat/index.html#/sharePage?mediaSource=ylb";//
+    webpageObject.thumbImage = paramData[@"shareImageUrl"];
+    webpageObject.webpageUrl =  paramData[@"shareActionUrl"];
+    //@"https://loanapp-stg.pingan.com.cn/app/website/ylbsat/index.html#/sharePage?mediaSource=ylb";//
     UMSocialMessageObject *messageObject = [[UMSocialMessageObject alloc] init];
     messageObject.shareObject = webpageObject;
     
