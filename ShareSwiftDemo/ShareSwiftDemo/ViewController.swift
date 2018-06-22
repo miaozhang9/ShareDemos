@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         btn.setTitle("启动贷款SDK(local)", for: .normal)
         btn.addTarget(self, action: #selector(launchClick), for: .touchUpInside)
         self.view.addSubview(btn)
-        
+        //设置用户自定义的平台
         self.shareManageConfig()
     }
 
@@ -81,7 +81,13 @@ class ViewController: UIViewController {
         UMSocialShareUIConfig.shareInstance().sharePageGroupViewConfig.sharePageGroupViewPostionType = UMSocialSharePageGroupViewPositionType.bottom;
         UMSocialShareUIConfig.shareInstance().sharePageScrollViewConfig.shareScrollViewPageItemStyleType = UMSocialPlatformItemViewBackgroudType.none;
         UMShareSwiftInterface.showShareMenuViewInWindowWithPlatformSelectionBlock { (platformType, userInfo) in
-            self.runShare(type: platformType, shareInfo: shareInfo)
+            //判断是否安装分享的app
+            if  UMSocialManager.default().isInstall(platformType) {
+                 self.runShare(type: platformType, shareInfo: shareInfo)
+            } else {
+                //没有安装分享所需的app,提示
+            }
+           
         }
     }
 
@@ -107,9 +113,22 @@ extension ViewController: QHBasicProtocol{
     func executeH5InfoAction(_ info: [AnyHashable : Any]!) -> [AnyHashable : Any]! {
       
         if info["action"] as! String == "gotoShare" {
-            self.showBottomNormalView(shareInfo: info! as NSDictionary)
+            //分享的类型
+            let shareType = info["shareType"] as? String
+            //如果shareType有值直接分享
+            if (shareType != nil) && !(shareType?.isEmpty)! {
+                let platformType =  UMSocialPlatformType.init(rawValue: Int(shareType!)!)
+                //判断是否安装分享的app
+                if  UMSocialManager.default().isInstall(platformType!) {
+                    self.runShare(type: platformType!, shareInfo: info! as NSDictionary)
+                } else {
+                    //没有安装分享所需的app,提示
+                }
+            } else {
+                 //如果shareType没值则需要弹出选择面板
+                 self.showBottomNormalView(shareInfo: info! as NSDictionary)
+            }
         }
-        
         return [:]
     }
     

@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     [self shareManageConfig];
      self.edgesForExtendedLayout = UIRectEdgeNone;
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.textField];
@@ -36,6 +35,9 @@
     [btn setTitle:@"启动贷款SDK(local)" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(launch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    //设置用户自定义的平台
+    [self shareManageConfig];
 
 }
 
@@ -111,12 +113,24 @@
 //得到H5信息操作 多功能接口 可以返回信息给H5
 -(NSDictionary *)executeH5InfoAction:(NSDictionary *)info{
     
-    //    [[QHLoanDoor share] interfaceOrientation:UIInterfaceOrientationPortrait];
-    
-    //    [[QHLoanDoor share] sendCallBackPluginResultDictionary:@{@"sssss":@"dddddd"} resultStatus:YES];
-   
     if ([info[@"action"] isEqualToString:@"gotoShare"]) {
-        [self showBottomNormalView:info];
+    
+        NSString *shareType = info[@"shareType"];
+        //如果shareType有值直接分享
+        if (shareType && shareType.length > 0) {
+            NSInteger platformType = shareType.integerValue;
+            //判断是否安装分享的app
+            if ([[UMSocialManager defaultManager] isInstall:(UMSocialPlatformType)platformType]) {
+                 [self runShareWithType:(UMSocialPlatformType)platformType withShareInfo:info];
+            } else {
+                //没有安装分享所需的app,提示
+            }
+           
+        } else {
+             //如果shareType没值则需要弹出选择面板
+            [self showBottomNormalView:info];
+        }
+
     }
   
     return {};
@@ -183,9 +197,13 @@
     [UMSocialShareUIConfig shareInstance].sharePageScrollViewConfig.shareScrollViewPageItemStyleType = UMSocialPlatformItemViewBackgroudType_None;
 
         [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
-            
-             [self runShareWithType:platformType withShareInfo:shareInfo];
-            
+            //判断是否安装了分享的app
+            if ([[UMSocialManager defaultManager] isInstall:(UMSocialPlatformType)platformType]) {
+                  [self runShareWithType:platformType withShareInfo:shareInfo];
+            } else {
+                //没有安装分享所需的app,提示
+            }
+           
         }];
     }
 
