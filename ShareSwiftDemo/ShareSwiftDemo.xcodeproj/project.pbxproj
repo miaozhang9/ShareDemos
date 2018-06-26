@@ -21,6 +21,10 @@
 		9B84A25C20C90AE800DFAD21 /* FaceRecognitionLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B84A25220C90ADC00DFAD21 /* FaceRecognitionLib.framework */; };
 		9B84A25D20C90AE800DFAD21 /* FaceRecognitionLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B84A25220C90ADC00DFAD21 /* FaceRecognitionLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B84A26A20C9127A00DFAD21 /* UMShareSwiftInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84A26920C9127A00DFAD21 /* UMShareSwiftInterface.swift */; };
+		9BBABE3920E222AF00CFFC3E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBABE3820E222AF00CFFC3E /* BaseViewController.swift */; };
+		9BBABE3B20E227CC00CFFC3E /* UIWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBABE3A20E227CC00CFFC3E /* UIWebViewVC.swift */; };
+		9BBABE3D20E227E500CFFC3E /* WKWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBABE3C20E227E500CFFC3E /* WKWebViewVC.swift */; };
+		9BBABE3F20E235AE00CFFC3E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9BBABE3E20E235AD00CFFC3E /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +58,10 @@
 		9B84A25320C90ADC00DFAD21 /* ACEFaceKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ACEFaceKit.bundle; sourceTree = "<group>"; };
 		9B84A26820C90F8A00DFAD21 /* ShareSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		9B84A26920C9127A00DFAD21 /* UMShareSwiftInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMShareSwiftInterface.swift; sourceTree = "<group>"; };
+		9BBABE3820E222AF00CFFC3E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9BBABE3A20E227CC00CFFC3E /* UIWebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebViewVC.swift; sourceTree = "<group>"; };
+		9BBABE3C20E227E500CFFC3E /* WKWebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewVC.swift; sourceTree = "<group>"; };
+		9BBABE3E20E235AD00CFFC3E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		B56B4F41164E0855C95B7C0B /* Pods-ShareSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareSwiftDemo/Pods-ShareSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D520E5F73EB026AE21685952 /* Pods-ShareSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareSwiftDemo/Pods-ShareSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +123,10 @@
 				9B84A24F20C90ADC00DFAD21 /* LoanSDK */,
 				9B84A23D20C90A1500DFAD21 /* AppDelegate.swift */,
 				9B84A23F20C90A1500DFAD21 /* ViewController.swift */,
+				9BBABE3A20E227CC00CFFC3E /* UIWebViewVC.swift */,
+				9BBABE3C20E227E500CFFC3E /* WKWebViewVC.swift */,
+				9BBABE3820E222AF00CFFC3E /* BaseViewController.swift */,
+				9BBABE3E20E235AD00CFFC3E /* index.html */,
 				9B84A24120C90A1500DFAD21 /* Main.storyboard */,
 				9B84A26820C90F8A00DFAD21 /* ShareSwiftDemo-Bridging-Header.h */,
 				9B84A24420C90A1900DFAD21 /* Assets.xcassets */,
@@ -204,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBABE3F20E235AE00CFFC3E /* index.html in Resources */,
 				9B84A24820C90A1900DFAD21 /* LaunchScreen.storyboard in Resources */,
 				9B84A25720C90ADC00DFAD21 /* ACEFaceKit.bundle in Resources */,
 				9B84A24520C90A1900DFAD21 /* Assets.xcassets in Resources */,
@@ -258,6 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B84A24020C90A1500DFAD21 /* ViewController.swift in Sources */,
+				9BBABE3920E222AF00CFFC3E /* BaseViewController.swift in Sources */,
+				9BBABE3D20E227E500CFFC3E /* WKWebViewVC.swift in Sources */,
+				9BBABE3B20E227CC00CFFC3E /* UIWebViewVC.swift in Sources */,
 				9B84A23E20C90A1500DFAD21 /* AppDelegate.swift in Sources */,
 				9B84A26A20C9127A00DFAD21 /* UMShareSwiftInterface.swift in Sources */,
 			);

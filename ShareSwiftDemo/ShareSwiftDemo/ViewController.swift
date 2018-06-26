@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     var textField:UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         textField = UITextField(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
         textField.center = CGPoint(x: view.center.x, y: view.center.y - 260)
@@ -27,12 +28,30 @@ class ViewController: UIViewController {
         btn.layer.borderColor = UIColor.blue.cgColor
         btn.layer.borderWidth = 1.0
         btn.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
-        btn.center = CGPoint(x: view.center.x, y: view.center.y - 190)
+        btn.center = CGPoint(x: view.center.x, y: view.center.y - 130)
         btn.setTitle("启动贷款SDK(local)", for: .normal)
         btn.addTarget(self, action: #selector(launchClick), for: .touchUpInside)
         self.view.addSubview(btn)
-        //设置用户自定义的平台
-        self.shareManageConfig()
+        
+        let btn2 = UIButton(type: .system)
+        btn2.layer.borderColor = UIColor.blue.cgColor
+        btn2.layer.borderWidth = 1.0
+        btn2.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
+        btn2.center = CGPoint(x: view.center.x, y: view.center.y - 130 + 100)
+        btn2.setTitle("启动UIWebViewVC", for: .normal)
+        btn2.addTarget(self, action: #selector(launchUIWebViewVC), for: .touchUpInside)
+        self.view.addSubview(btn2)
+        
+        
+        let btn3 = UIButton(type: .system)
+        btn3.layer.borderColor = UIColor.blue.cgColor
+        btn3.layer.borderWidth = 1.0
+        btn3.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
+        btn3.center = CGPoint(x: view.center.x, y: view.center.y - 130 + 200)
+        btn3.setTitle("启动WKWebViewVC", for: .normal)
+        btn3.addTarget(self, action: #selector(launchWKWebViewVC), for: .touchUpInside)
+        self.view.addSubview(btn3)
+      
     }
 
     @objc func launchClick() {
@@ -40,57 +59,32 @@ class ViewController: UIViewController {
         if textField.text != nil &&  !(textField.text?.isEmpty)!{
             str = textField.text!
         }
-        //        str = "https://test-p2pp-loan-stg.pingan.com.cn/loan/page/demo/index.html?t=test"
         let helper = QHLoanDoor.share().setDataInfo([:])?.setBasicDelegate(self)?.setBarColor("#d8e6ff")?.setBarTitleColor("#000000")?.setBarTitleFontSize(17)?.setBackBtnTitle("返回")?.setBackBtnTitleColor("#ff6600")?.setBackBtnImage(nil)?.setAgent("ToCred")?.setCoreWebView(QHCoreWebViewEnum.uiWebView)?.setStartPageUrl(str)?.start()!
     }
-    
-    func shareManageConfig() {
-        UMShareSwiftInterface.setPreDefinePlatforms([
-            NSNumber(integerLiteral: UMSocialPlatformType.wechatSession.rawValue),
-            NSNumber(integerLiteral: UMSocialPlatformType.wechatTimeLine.rawValue),
-             NSNumber(integerLiteral: UMSocialPlatformType.wechatFavorite.rawValue)])
-        
+   @objc func launchUIWebViewVC() {
+        var str = "www/index.html"
+        if textField.text != nil &&  !(textField.text?.isEmpty)!{
+            str = textField.text!
+        }
+        let vc = UIWebViewVC()
+        vc.startUrlStr = str
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+   @objc func launchWKWebViewVC() {
+        var str = "www/index.html"
+        if textField.text != nil &&  !(textField.text?.isEmpty)!{
+            str = textField.text!
+        }
+        let vc = WKWebViewVC()
+        vc.startUrlStr = str
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func runShare(type:UMSocialPlatformType,shareInfo:NSDictionary) {
-        let webpageObject = UMShareWebpageObject.init()
-        let  paramData:NSDictionary = shareInfo["paramData"] as! NSDictionary
-        webpageObject.title = paramData["shareTitle"] as! String
-        webpageObject.descr = paramData["shareContent"] as! String
-        webpageObject.thumbImage = paramData["shareImageUrl"] as! String
-        webpageObject.webpageUrl = paramData["shareActionUrl"] as! String
-        let messageObject = UMSocialMessageObject.init()
-        messageObject.shareObject = webpageObject
-        UMShareSwiftInterface.share(plattype: type, messageObject: messageObject, viewController: self) { (result, error) in
-            //do anything
-        }
-    }
-    
-   func showBottomNormalView(shareInfo:NSDictionary)
-    {
-//    //加入copy的操作
-//    //@see http://dev.umeng.com/social/ios/进阶文档#6
-//    [UMSocialUIManager addCustomPlatformWithoutFilted:UMSocialPlatformType_UserDefine_Begin+2
-//    withPlatformIcon:[UIImage imageNamed:@"icon_circle"]
-//    withPlatformName:@"演示icon"];
-    
-        UMSocialShareUIConfig.shareInstance().sharePageGroupViewConfig.sharePageGroupViewPostionType = UMSocialSharePageGroupViewPositionType.bottom;
-        UMSocialShareUIConfig.shareInstance().sharePageScrollViewConfig.shareScrollViewPageItemStyleType = UMSocialPlatformItemViewBackgroudType.none;
-        UMShareSwiftInterface.showShareMenuViewInWindowWithPlatformSelectionBlock { (platformType, userInfo) in
-            //判断是否安装分享的app
-            if  UMSocialManager.default().isInstall(platformType) {
-                 self.runShare(type: platformType, shareInfo: shareInfo)
-            } else {
-                //没有安装分享所需的app,提示
-            }
-           
-        }
-    }
-
 }
 
 extension ViewController: QHBasicProtocol{
@@ -112,42 +106,11 @@ extension ViewController: QHBasicProtocol{
     
     func executeH5InfoAction(_ info: [AnyHashable : Any]!) -> [AnyHashable : Any]! {
       
-        if info["action"] as! String == "gotoShare" {
-            //分享的类型
-            let shareType = info["shareType"] as? String
-            //如果shareType有值直接分享
-            if (shareType != nil) && !(shareType?.isEmpty)! {
-                let platformType =  UMSocialPlatformType.init(rawValue: Int(shareType!)!)
-                //判断是否安装分享的app
-                if  UMSocialManager.default().isInstall(platformType!) {
-                    self.runShare(type: platformType!, shareInfo: info! as NSDictionary)
-                } else {
-                    //没有安装分享所需的app,提示
-                }
-            } else {
-                 //如果shareType没值则需要弹出选择面板
-                 self.showBottomNormalView(shareInfo: info! as NSDictionary)
-            }
-        }
+        self.getDataInfo(info: info as! NSDictionary)
         return [:]
     }
     
     
-}
-
-extension ViewController:UMSocialShareMenuViewDelegate {
-    func umSocialShareMenuViewDidAppear() {
-        print("UMSocialShareMenuViewDidAppear")
-    }
-    
-    func umSocialShareMenuViewDidDisappear() {
-         print("UMSocialShareMenuViewDidDisappear")
-    }
-     //不需要改变父窗口则不需要重写此协议
-    func umSocialParentView(_ defaultSuperView: UIView?) -> UIView? {
-        
-        return defaultSuperView
-    }
 }
 
 extension ViewController:UITextFieldDelegate {

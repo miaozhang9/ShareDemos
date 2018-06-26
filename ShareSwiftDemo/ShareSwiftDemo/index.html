@@ -1,0 +1,64 @@
+
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+            <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+<!--                <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' *">-->
+<!--                <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data:; default-src * 'self' gap: ; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; ">-->
+                        
+                      
+<!--            <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+<!--                <meta name="format-detection" content="telephone=no">-->
+<!--                    <meta name="msapplication-tap-highlight" content="no">-->
+<!--                        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">-->
+<!--                            <link rel="stylesheet" type="text/css" href="css/index.css">-->
+<!--                                <title>Hello World</title>-->
+<!--            <script type="text/javascript" src="cordova.js"></script>-->
+<!--            local_intercept/www/-->
+            <style>
+                input {
+                    width: 80%;
+                    height: 40;
+                    margin-left:10%;
+                    text-align:center;
+                    border-width:1px;
+                    border-color:#333333;
+                    border-style:solid;
+                    font-size:16px;
+                    vertical-align:middle;
+                    margin-bottom: 10px !important;
+                    padding-top: 10px !important;
+                    margin-top: 10px !important;
+                }
+            </style>
+            
+            <script language="javascript">
+              
+            function executeH5InfoAction(params) {
+                //UIWebView调用
+                Native.executeH5InfoAction(params);
+             
+            }
+            
+            function executeH5InfoAction2(params) {
+
+                //WKWebView调用
+                window.webkit.messageHandlers.executeH5InfoAction.postMessage(params)
+            }
+         
+
+            </script>
+            <title>Tools List</title>
+            </head>
+
+    <body>
+        <h1>Tools List</h1>
+        <a href="https://www.baidu.com">本地_百度一下</a>
+   
+         <input type="button" value="（UIWebView）调用分享" onclick="executeH5InfoAction({'action':'gotoShare','shareType':'2','paramData':{'shareTitle':'标题','shareContent':'内容内容','shareImageUrl':'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528437962549&di=6dc8710b0e286c919e4b611c3ca40cb3&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F016b815809fab8a84a0d304f7e1fde.png','shareActionUrl':'https://loanapp-stg.pingan.com.cn/app/website/ylbsat/index.html#/activityPage?mediaSource=ylb&refereePhone=18321509093'}})" />
+          <input type="button" value="（WKWebView）调用分享" onclick="executeH5InfoAction2({'action':'gotoShare','shareType':'2','paramData':{'shareTitle':'标题','shareContent':'内容内容','shareImageUrl':'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528437962549&di=6dc8710b0e286c919e4b611c3ca40cb3&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F016b815809fab8a84a0d304f7e1fde.png','shareActionUrl':'https://loanapp-stg.pingan.com.cn/app/website/ylbsat/index.html#/activityPage?mediaSource=ylb&refereePhone=18321509093'}})" />
+     
+        
+    </body>
+</html>
