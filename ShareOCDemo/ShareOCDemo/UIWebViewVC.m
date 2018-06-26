@@ -12,6 +12,29 @@
 #import <UMShare/UMShare.h>
 #import <UShareUI/UShareUI.h>
 
+//首先创建一个实现了JSExport协议的协议
+@protocol JSObjectDelegate <JSExport>
+
+-(void)executeH5InfoAction:(id)info;
+
+@end
+
+@interface JavaScriptModel : NSObject<JSObjectDelegate>
+@property(nonatomic, strong)JSContext *jsContext;
+@property(nonatomic, strong)BaseViewController *viewController;
+
+
+@end
+
+@implementation JavaScriptModel
+
+-(void)executeH5InfoAction:(id )info {
+    
+    [self.viewController getDataInfo:(NSDictionary *)info];
+}
+
+@end
+
 @interface UIWebViewVC ()<UIWebViewDelegate>
 @property (nonatomic, strong) JSContext *jsContext;
 @end
@@ -57,16 +80,22 @@
         con.exception = exception;
     };
    
-    __weak __typeof(self) weakSelf = self;
-    // @"executeH5InfoAction"为和js 约定执行的方法名,这样js 可以自由选择时机调用native端 OC 代码
-      self.jsContext[@"executeH5InfoAction"] = ^(id info) {
-          __strong __typeof(self) strongSelf = weakSelf;
-          //回调js 传递的参数 和上边info一样
-//        NSArray *args = [JSContext currentArguments];
-          dispatch_async(dispatch_get_main_queue(), ^{
-                [strongSelf getDataInfo:(NSDictionary *)info];
-        });
-    };
+    //1.使用model桥接
+    JavaScriptModel *model = [JavaScriptModel new];
+    model.jsContext = self.jsContext;
+    model.viewController = self;
+    [self.jsContext setObject:model forKeyedSubscript:@"Native"];
+    //2.直接执行  但是swift此方法不行，只能使用model桥接
+//    __weak __typeof(self) weakSelf = self;
+//    // @"executeH5InfoAction"为和js 约定执行的方法名,这样js 可以自由选择时机调用native端 OC 代码
+//      self.jsContext[@"executeH5InfoAction"] = ^(id info) {
+//          __strong __typeof(self) strongSelf = weakSelf;
+//          //回调js 传递的参数 和上边info一样
+////        NSArray *args = [JSContext currentArguments];
+//          dispatch_async(dispatch_get_main_queue(), ^{
+//                [strongSelf getDataInfo:(NSDictionary *)info];
+//        });
+//    };
     
 
 }
@@ -90,3 +119,6 @@
 */
 
 @end
+
+
+
