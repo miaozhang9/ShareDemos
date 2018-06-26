@@ -15,12 +15,12 @@ class ViewController: BaseViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         textField = UITextField(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
-        textField.center = CGPoint(x: view.center.x, y: view.center.y - 260)
+        textField.center = CGPoint(x: view.center.x, y: view.center.y - 200)
         textField.borderStyle = .roundedRect
         textField.clearButtonMode = .whileEditing
         textField.placeholder = ""
         textField.delegate = self
-        textField.text = "www/index.html"//https://test-p2pp-loan-stg.pingan.com.cn/loan/page/demo/index.html
+        textField.text = "https://loanapp-mam-stg2.pingan.com.cn:10271/app/website/ylbsat/index.html#/sharePage?mediaSource=ylb";//"www/index.html";
         self.view.addSubview(textField)
         
         
