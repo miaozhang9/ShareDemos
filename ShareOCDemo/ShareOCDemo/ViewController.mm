@@ -37,7 +37,7 @@
     btn.layer.borderWidth = 1.0;
     btn.frame = CGRectMake(0, 0, 300, 50);
     btn.center = CGPointMake(self.view.center.x, self.view.center.y - 130);
-    [btn setTitle:@"启动贷款SDK(local)" forState:UIControlStateNormal];
+    [btn setTitle:@"启动Cordova" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(launch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     

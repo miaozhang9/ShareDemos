@@ -29,7 +29,7 @@ class ViewController: BaseViewController {
         btn.layer.borderWidth = 1.0
         btn.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
         btn.center = CGPoint(x: view.center.x, y: view.center.y - 130)
-        btn.setTitle("启动贷款SDK(local)", for: .normal)
+        btn.setTitle("启动Cordova", for: .normal)
         btn.addTarget(self, action: #selector(launchClick), for: .touchUpInside)
         self.view.addSubview(btn)
         
