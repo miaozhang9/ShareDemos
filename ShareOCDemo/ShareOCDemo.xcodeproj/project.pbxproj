@@ -21,6 +21,11 @@
 		9B84A22420C7F4E300DFAD21 /* OCFTFaceDetect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B84A21A20C7F4D200DFAD21 /* OCFTFaceDetect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B84A22520C7F4E300DFAD21 /* FaceRecognitionLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B84A21B20C7F4D200DFAD21 /* FaceRecognitionLib.framework */; };
 		9B84A22620C7F4E300DFAD21 /* FaceRecognitionLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B84A21B20C7F4D200DFAD21 /* FaceRecognitionLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9BBABE2D20E1DB5100CFFC3E /* UIWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBABE2C20E1DB5100CFFC3E /* UIWebViewVC.m */; };
+		9BBABE3020E1DB6900CFFC3E /* WKWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBABE2F20E1DB6900CFFC3E /* WKWebViewVC.m */; };
+		9BBABE3320E1E54A00CFFC3E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBABE3220E1E54A00CFFC3E /* BaseViewController.m */; };
+		9BBABE3520E212D300CFFC3E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBABE3420E212D300CFFC3E /* libc++.tbd */; };
+		9BBABE3720E2171700CFFC3E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9BBABE3620E2171600CFFC3E /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +61,14 @@
 		9B84A21A20C7F4D200DFAD21 /* OCFTFaceDetect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCFTFaceDetect.framework; sourceTree = "<group>"; };
 		9B84A21B20C7F4D200DFAD21 /* FaceRecognitionLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceRecognitionLib.framework; sourceTree = "<group>"; };
 		9B84A21C20C7F4D200DFAD21 /* ACEFaceKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ACEFaceKit.bundle; sourceTree = "<group>"; };
+		9BBABE2B20E1DB5100CFFC3E /* UIWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIWebViewVC.h; sourceTree = "<group>"; };
+		9BBABE2C20E1DB5100CFFC3E /* UIWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIWebViewVC.m; sourceTree = "<group>"; };
+		9BBABE2E20E1DB6900CFFC3E /* WKWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewVC.h; sourceTree = "<group>"; };
+		9BBABE2F20E1DB6900CFFC3E /* WKWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewVC.m; sourceTree = "<group>"; };
+		9BBABE3120E1E54A00CFFC3E /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		9BBABE3220E1E54A00CFFC3E /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		9BBABE3420E212D300CFFC3E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9BBABE3620E2171600CFFC3E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		DB94724298CBA59458899445 /* Pods_ShareOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBABE3520E212D300CFFC3E /* libc++.tbd in Frameworks */,
 				9B84A22320C7F4E300DFAD21 /* OCFTFaceDetect.framework in Frameworks */,
 				9B84A22520C7F4E300DFAD21 /* FaceRecognitionLib.framework in Frameworks */,
 				9B84A22120C7F4E300DFAD21 /* QHLoanlib.framework in Frameworks */,
@@ -100,7 +114,14 @@
 				9B84A20320C7F4AE00DFAD21 /* AppDelegate.m */,
 				9B84A20520C7F4AE00DFAD21 /* ViewController.h */,
 				9B84A20620C7F4AE00DFAD21 /* ViewController.mm */,
+				9BBABE2B20E1DB5100CFFC3E /* UIWebViewVC.h */,
+				9BBABE2C20E1DB5100CFFC3E /* UIWebViewVC.m */,
+				9BBABE2E20E1DB6900CFFC3E /* WKWebViewVC.h */,
+				9BBABE2F20E1DB6900CFFC3E /* WKWebViewVC.m */,
+				9BBABE3120E1E54A00CFFC3E /* BaseViewController.h */,
+				9BBABE3220E1E54A00CFFC3E /* BaseViewController.m */,
 				9B84A20820C7F4AE00DFAD21 /* Main.storyboard */,
+				9BBABE3620E2171600CFFC3E /* index.html */,
 				9B84A20B20C7F4AF00DFAD21 /* Assets.xcassets */,
 				9B84A20D20C7F4AF00DFAD21 /* LaunchScreen.storyboard */,
 				9B84A21020C7F4AF00DFAD21 /* Info.plist */,
@@ -123,6 +144,7 @@
 		9EDFBA77C7FF139F3D1BD49D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BBABE3420E212D300CFFC3E /* libc++.tbd */,
 				DB94724298CBA59458899445 /* Pods_ShareOCDemo.framework */,
 			);
 			name = Frameworks;
@@ -150,6 +172,7 @@
 				9B84A1FD20C7F4AE00DFAD21 /* Resources */,
 				9B84A22720C7F4E300DFAD21 /* Embed Frameworks */,
 				1AD789CB62D8F27AB6F02B64 /* [CP] Copy Pods Resources */,
+				6735C6B0F8F3EFFFD8C94C50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBABE3720E2171700CFFC3E /* index.html in Resources */,
 				9B84A20F20C7F4AF00DFAD21 /* LaunchScreen.storyboard in Resources */,
 				9B84A22020C7F4D200DFAD21 /* ACEFaceKit.bundle in Resources */,
 				9B84A20C20C7F4AF00DFAD21 /* Assets.xcassets in Resources */,
@@ -225,6 +249,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareOCDemo/Pods-ShareOCDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6735C6B0F8F3EFFFD8C94C50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareOCDemo/Pods-ShareOCDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F14037645F1FE1660F3A3920 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,8 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBABE2D20E1DB5100CFFC3E /* UIWebViewVC.m in Sources */,
+				9BBABE3320E1E54A00CFFC3E /* BaseViewController.m in Sources */,
 				9B84A20720C7F4AE00DFAD21 /* ViewController.mm in Sources */,
 				9B84A21220C7F4AF00DFAD21 /* main.m in Sources */,
+				9BBABE3020E1DB6900CFFC3E /* WKWebViewVC.m in Sources */,
 				9B84A20420C7F4AE00DFAD21 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,10 +445,7 @@
 				);
 				INFOPLIST_FILE = ShareOCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ylb.YLBEnterprisePublic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e931a562-b634-4a4f-a474-69d5d98e04ea";
@@ -430,10 +469,7 @@
 				);
 				INFOPLIST_FILE = ShareOCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ylb.YLBEnterprisePublic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eb5ad6d0-c096-421a-b632-9d22b64566e2";

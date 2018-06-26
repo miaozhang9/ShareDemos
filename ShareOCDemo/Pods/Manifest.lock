@@ -11,19 +11,13 @@ PODS:
 
 DEPENDENCIES:
   - UMCCommon
-  - UMCShare/Core
   - UMCShare/Social/ReducedWeChat
   - UMCShare/UI
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - UMCCommon
-    - UMCShare
 
 SPEC CHECKSUMS:
   UMCCommon: 16b674e9de0616d3a6128c551348a686d869c3c7
   UMCShare: 023886b10d11119331c9c46d8e8a0c31fe67c23e
 
-PODFILE CHECKSUM: 0e9cf2d0f5cbeed468267b09b6d21aa489742dca
+PODFILE CHECKSUM: fb9eda88419520f8d12f42fdf059d6596124ab01
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0
